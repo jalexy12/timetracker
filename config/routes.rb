@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'projects/index' => "projects#index"
+
   get '/' => 'site#home'
   get "contact" => 'site#contact'
   # The priority is based upon order of creation: first created -> highest priority.
