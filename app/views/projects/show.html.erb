@@ -1,0 +1,6 @@
+	<h1><%= "Project number: #{params[:id]}" %></h1>
+
+	<b><%= @project.name %></b>
+	<% if @project.description.present? %>
+	 - <%= @project.description %>
+	 <% end %>
