@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get '/' => 'site#home'
   get "contact" => 'site#contact'
 
-  get "/projects/:id/entries" => "entries#index"
+  get "/projects/:project_id/entries" => "entries#index"
   get "/projects/:id/entries/:id" => "entries#show"
-  
+  get "/no_projects_found" => "projects#notfound"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -7,6 +7,6 @@
 		<%= entry.date %>
 	</li>
 	<%= @project.name %>
-	Total hours worked: <%= @project.total_hours_worked(@date.month, @date.year) %>
+	Total hours worked: <%= @project.how_many_hours(@date.month, @date.year) %>
 	<% end %>
 </ul>	
