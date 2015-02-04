@@ -1,12 +1,9 @@
 <html>
 	<ul>
 		<% @projects.each do |project| %>
+			<li><%= link_to(project.name, project_entries_path(project)) %></li>
 			<% if project.description.present? %>
-				<li><b><a href=<%= "/projects/#{project.id}" %>><%= project.name %></a></b>
-				<i><%= " - #{project.description}" %></i></li>
-			<% else %>
-				<li><b><a href=<%= "/projects/#{project.id}" %>><%= project.name %></a></b>
-			
+				<i><%= " - #{project.description}" %></i></li>			
 			<% end %>
 		<% end %>
 	</ul>

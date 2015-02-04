@@ -8,6 +8,11 @@
 	</li>
 	<%= @project.name %>
 	Total hours worked: <%= @project.how_many_hours(@date.month, @date.year) %>
+	<%= link_to("Home", projects_path) %>
+	<%= link_to("New", new_project_entry_path) %>
+	<%= link_to("Edit", edit_project_entry_path(@project, entry)) %>
 	<% end %>
+
+
 
 </ul>	

@@ -9,7 +9,7 @@
 	<%= f.date_field :date %>
 	<br>
 	<%= f.submit "Save" %>
-	<%= link_to("Cancel", project_entries_path) %>
+	<%= link_to("Cancel", project_entries_path(@project)) %>
 <% end %>
 
 
@@ -20,4 +20,4 @@
 		  <% end %>
 		  </ul>
 		 <% end %>
-		
+	
