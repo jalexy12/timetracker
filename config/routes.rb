@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'projects/index' => "projects#index"
-  get "projects" => "projects#index"
-  get "/projects/:id" => "projects#show"
 
   get '/' => 'site#home'
-  get "contact" => 'site#contact'
 
-  get "/projects/:project_id/entries" => "entries#index"
-  get "/projects/:id/entries/:id" => "entries#show"
   get "/no_projects_found" => "projects#notfound"
+
+  resources :projects do
+    resources :entries
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
