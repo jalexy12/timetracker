@@ -1,0 +1,12 @@
+<h1> <%= @project.name %></h1>
+<ul>
+	<% @entries.each do |entry| %>
+	<li>
+		<%= entry.hours %>h
+		<%= entry.minutes %> m-
+		<%= entry.date %>
+	</li>
+	<%= @project.name %>
+	Total hours worked: <%= @project.total_hours_worked(@date.month, @date.year) %>
+	<% end %>
+</ul>	

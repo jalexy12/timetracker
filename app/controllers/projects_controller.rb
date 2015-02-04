@@ -7,9 +7,9 @@ class ProjectsController < ApplicationController
   end
 
   def show
-	unless @project = Project.find_by(id: params[:id])  
-		render 'no_projects_found'
-  	end
+  	unless @project = Project.find_by(id: params[:id])  
+  		  render 'no_projects_found'
+    end
   end
 
 end
