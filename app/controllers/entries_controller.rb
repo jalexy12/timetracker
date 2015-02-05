@@ -37,6 +37,7 @@ class EntriesController < ApplicationController
 		@entry = @project.entries.new(entry_params)
 		if @entry.save
 			flash[:notice] = "Entry created successfully"
+			Usermailer.entry_created(@project).deliver
 			redirect_to action: "index", controller: "entries", project_id: @project.id
 		else
 			flash[:error] = "Entry not created"
